@@ -13,5 +13,9 @@
 
         public abstract void TurnOn();
         public abstract void TurnOff();
+        public virtual void Test()
+        {
+            // Equipment test
+        }
     }
 }
