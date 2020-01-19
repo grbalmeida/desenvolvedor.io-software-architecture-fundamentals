@@ -1,12 +1,23 @@
-﻿using System;
+﻿using SOLID.OCP.Solution.ExtensionMethods;
+using System;
 
 namespace SOLID
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Choose the operation");
+            Console.WriteLine("1 - OCP");
+
+            var option = Console.ReadKey();
+
+            switch (option.KeyChar)
+            {
+                case '1':
+                    ATM.Operations();
+                    break;
+            }
         }
     }
 }
