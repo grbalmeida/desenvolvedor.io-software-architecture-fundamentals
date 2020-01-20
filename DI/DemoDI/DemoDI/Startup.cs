@@ -25,6 +25,16 @@ namespace DemoDI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region Lifecycle
+
+            services.AddTransient<IOperationTransient, Operation>();
+            services.AddScoped<IOperationScoped, Operation>();
+            services.AddSingleton<IOperationSingleton, Operation>();
+            services.AddSingleton<IOperationSingletonInstance>(new Operation(Guid.Empty));
+            services.AddTransient<OperationService>();
+
+            #endregion
+
             #region RealLife
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
