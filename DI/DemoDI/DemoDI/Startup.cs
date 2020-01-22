@@ -48,6 +48,28 @@ namespace DemoDI
 
             #endregion
 
+            #region MultipleClasses
+
+            services.AddTransient<ServiceA>();
+            services.AddTransient<ServiceB>();
+            services.AddTransient<ServiceC>();
+            services.AddTransient<Func<string, IService>>(serviceProvider => key =>
+            {
+                switch (key)
+                {
+                    case "A":
+                        return serviceProvider.GetService<ServiceA>();
+                    case "B":
+                        return serviceProvider.GetService<ServiceB>();
+                    case "C":
+                        return serviceProvider.GetService<ServiceC>();
+                    default:
+                        return null;
+                }
+            });
+
+            #endregion
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
