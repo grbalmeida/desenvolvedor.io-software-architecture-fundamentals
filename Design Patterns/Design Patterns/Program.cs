@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.AbstractFactory;
+using DesignPatterns.FactoryMethod;
 using System;
 
 namespace DesignPatterns
@@ -12,6 +13,7 @@ namespace DesignPatterns
             Console.WriteLine("Creational Patterns");
             Console.WriteLine("------------------------");
             Console.WriteLine("1 - Abstract Factory");
+            Console.WriteLine("2 - Factory Method");
             Console.WriteLine("------------------------");
 
             var option = Console.ReadKey();
@@ -24,6 +26,9 @@ namespace DesignPatterns
             {
                 case '1':
                     AbstractFactoryExecution.Execute();
+                    break;
+                case '2':
+                    FactoryMethodExecution.Execute();
                     break;
             }
 
