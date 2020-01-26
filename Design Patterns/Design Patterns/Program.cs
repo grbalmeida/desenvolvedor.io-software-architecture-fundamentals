@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.AbstractFactory;
 using DesignPatterns.FactoryMethod;
+using DesignPatterns.Singleton;
 using System;
 
 namespace DesignPatterns
@@ -14,6 +15,7 @@ namespace DesignPatterns
             Console.WriteLine("------------------------");
             Console.WriteLine("1 - Abstract Factory");
             Console.WriteLine("2 - Factory Method");
+            Console.WriteLine("3 - Singleton");
             Console.WriteLine("------------------------");
 
             var option = Console.ReadKey();
@@ -29,6 +31,9 @@ namespace DesignPatterns
                     break;
                 case '2':
                     FactoryMethodExecution.Execute();
+                    break;
+                case '3':
+                    SingletonExecution.Execute();
                     break;
             }
 
