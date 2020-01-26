@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.AbstractFactory;
 using DesignPatterns.Adapter;
+using DesignPatterns.Facade;
 using DesignPatterns.FactoryMethod;
 using DesignPatterns.Singleton;
 using System;
@@ -21,6 +22,7 @@ namespace DesignPatterns
             Console.WriteLine("Structural Patterns");
             Console.WriteLine("------------------------");
             Console.WriteLine("4 - Adapter");
+            Console.WriteLine("5 - Facade");
 
             var option = Console.ReadKey();
 
@@ -41,6 +43,9 @@ namespace DesignPatterns
                     break;
                 case '4':
                     AdapterExecution.Execute();
+                    break;
+                case '5':
+                    FacadeExecution.Execute();
                     break;
             }
 
