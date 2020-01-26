@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.AbstractFactory;
 using DesignPatterns.Adapter;
+using DesignPatterns.Command;
 using DesignPatterns.Composite;
 using DesignPatterns.Facade;
 using DesignPatterns.FactoryMethod;
@@ -26,6 +27,7 @@ namespace DesignPatterns
             Console.WriteLine("5 - Facade");
             Console.WriteLine("6 - Composite");
             Console.WriteLine("------------------------");
+            Console.WriteLine("7 - Command");
 
             var option = Console.ReadKey();
 
@@ -52,6 +54,9 @@ namespace DesignPatterns
                     break;
                 case '6':
                     CompositeExecution.Execute();
+                    break;
+                case '7':
+                    CommandExecution.Execute();
                     break;
             }
 
