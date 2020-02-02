@@ -5,6 +5,7 @@ using DesignPatterns.Composite;
 using DesignPatterns.Facade;
 using DesignPatterns.FactoryMethod;
 using DesignPatterns.Singleton;
+using DesignPatterns.Strategy;
 using System;
 
 namespace DesignPatterns
@@ -28,6 +29,7 @@ namespace DesignPatterns
             Console.WriteLine("6 - Composite");
             Console.WriteLine("------------------------");
             Console.WriteLine("7 - Command");
+            Console.WriteLine("8 - Strategy");
 
             var option = Console.ReadKey();
 
@@ -57,6 +59,9 @@ namespace DesignPatterns
                     break;
                 case '7':
                     CommandExecution.Execute();
+                    break;
+                case '8':
+                    StrategyExecution.Execute();
                     break;
             }
 
